@@ -674,8 +674,8 @@ function load_plugins()
   for k, v in pairs(_config.enabled_plugins) do
     print("Loading plugin", v)
 
-    local ok, err =  pcall(function()
-      local t = loadfile("plugins/"..v..'.lua')()
+       local ok, err =  pcall(function()
+        local t = loadfile("plugins/"..v..'.lua')()
       plugins[v] = t
     end)
 
