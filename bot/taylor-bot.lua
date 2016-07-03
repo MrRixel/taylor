@@ -675,7 +675,7 @@ function load_plugins()
     print("Loading plugin", v)
 
        local ok, err =  pcall(function()
-        local t = loadfile("plugins/"..v..'.lua')()
+       local t = loadfile("./plugins/"..v..'.lua')()
       plugins[v] = t
     end)
 
